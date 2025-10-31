@@ -1,0 +1,142 @@
+h1 {
+  text-align: center;
+}
+
+body {
+  background: linear-gradient(white, lightblue);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  flex: auto;
+}
+
+/* Navbar tweaks */
+#navbar {
+  position: fixed;
+  margin-top: 1%;
+  margin-left: 95%;
+  border: none;
+  background: none;
+  font-size: xx-large;
+
+  /* So that navbar is still visible */
+  z-index: 4;
+}
+
+/* The three bar icon on the top right */
+#navmenu {
+  position: fixed;
+  background-color: aquamarine;
+  width: 25vw;
+  height: 100vh;
+  margin-left: 75%;
+  padding: 3%;
+  padding-top: 5%;
+  transform: translateX(100%); /* hides off-screen */
+  z-index: 3;
+}
+
+/* Add blackened effect to the page when opening navigation menu */
+#filter {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0;
+  z-index: 2;
+}
+
+.container {
+  background-color: aqua;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  padding-top: 1%;
+}
+
+/* Picture tweaks */
+img {
+  float: right;
+  margin: 1%;
+  width: 15%;
+}
+
+/* Social link tweaks */
+.socials {
+  text-decoration: none;
+  font-size: large;
+  font-weight: bold;
+}
+
+.icon {
+  font-size: x-large;
+  margin-right: 2%;
+  z-index: 5;
+  position: relative;
+}
+
+.icon:hover {
+  color: blueviolet;
+}
+
+.fa-discord {
+  color: blue;
+}
+.fa-youtube {
+  margin-left: 10%;
+  color: red;
+}
+.fa-instagram {
+  color: orangered;
+}
+.fa-tiktok {
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+  position: relative;
+  z-index: 5;
+
+}
+a:hover {
+  color: blueviolet;
+}
+
+/* Tweaks when device is smaller */
+@media (max-width: 500px) {
+  #navmenu {
+    margin-left: 65%;
+    width: 35vw;
+    /* Make sure the two values add up to 100 */
+  }
+}
+
+/* Animation tweaks */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 0.5;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
